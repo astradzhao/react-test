@@ -4,13 +4,16 @@
   "description": "test react",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "set NODE_ENV=production&&webpack",
     "start": "webpack serve"
   },
   "babel": {
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      "syntax-dynamic-import"
     ]
   },
   "repository": {
@@ -37,9 +40,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "prop-types": "^15.7.2",
+    "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }
