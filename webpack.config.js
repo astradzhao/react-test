@@ -19,9 +19,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'app/index.html'
         }),
-        new CopyPlugin([
-            { from: '_redirects'}
-        ])
+        new CopyPlugin({ patterns: [{ from : '_redirects' }] })
     ], 
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devServer: {
